@@ -1,5 +1,6 @@
-package com.card;
+package com.deck;
 
+import com.card.Card;
 import com.utilities.Input;
 
 import java.util.Arrays;
@@ -9,7 +10,7 @@ public class TestDeck implements Deck{
             "Clubs", "Diamonds", "Hearts", "Spades"
     };
     public static final String[] VALUES = {
-            "Ace", "2", "3", "4", "5", "6", "7", "8", "9", "10", "Jack", "Queen", "King"
+            "2", "3", "4", "5", "6", "7", "8", "9", "10", "Jack", "Queen", "King", "Ace"
     };
 
     @Override

@@ -1,5 +1,6 @@
-package com.card;
+package com.deck;
 
+import com.card.Card;
 import com.utilities.CLI;
 import com.utilities.Input;
 import com.utilities.UI;
