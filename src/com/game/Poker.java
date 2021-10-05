@@ -5,7 +5,7 @@ package com.game;
  *
  * @author John Gillard
  * @since 1/10/2021
- * @version 0.0.1
+ * @version 0.0.2
  */
 
 import com.actors.Player;
@@ -20,13 +20,18 @@ import java.util.List;
  * P2 wins with Straight, Queen high
  * Two Pair, Ace High
  * kickers are side cards that break ties
- *
+ * burn card
+ * flop
+ * ?
+ * river
  */
 
 public class Poker extends Game {
     private Deck deck;
     private final List<Hand> hands = new ArrayList<>();
-    private int MINIMUM_BET = 2;
+    private int BIG_BLIND;
+    private int bet;
+    private int pot;
 
     public Poker(){
         super(2, 4);
@@ -39,6 +44,7 @@ public class Poker extends Game {
     @Override
     public void play() {
         do{
+            roundSetup();
             round();
             displayResults();
         }while(players.size() > 0);
@@ -62,7 +68,8 @@ public class Poker extends Game {
                 draw(hand);
         }
 
-
+        bet = BIG_BLIND = 2;
+        pot = 0;
     }
 
     @Override

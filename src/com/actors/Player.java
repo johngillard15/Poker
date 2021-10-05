@@ -18,7 +18,7 @@ public class Player implements Actor {
 
     @Override
     public byte getAction() {
-        return ACTION;
+        return FOLD;
     }
 
     @Override
