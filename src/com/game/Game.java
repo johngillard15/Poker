@@ -62,12 +62,6 @@ public abstract class Game {
         }while(players.size() < numPlayers);
     }
 
-    protected int getPlayerCount(){
-        System.out.println("How many players will there be?");
-        System.out.print("players ");
-        return MAX_PLAYERS == -1 ? Input.getInt(MIN_PLAYERS) : Input.getInt(MIN_PLAYERS, MAX_PLAYERS);
-    }
-
     public abstract void play();
     protected abstract void round();
     protected abstract void turn(Player activePlayer);
